@@ -26,6 +26,8 @@ spring:
       max-wait-millis: 150
 
 eureka:
+  instance:
+    hostname: 47.103.15.103
   client:
     registerWithEureka: true
     fetchRegistry: true
@@ -58,6 +60,8 @@ spring:
       max-wait-millis: 150
 
 eureka:
+  instance:
+    hostname: 47.103.15.103
   client:
     registerWithEureka: true
     fetchRegistry: true
