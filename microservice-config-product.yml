@@ -34,7 +34,7 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://47.103.15.103:6001/eureka
+      defaultZone: http://${eureka.instance.hostname}:6001/eureka
 ---
 server:
   port: 8101
@@ -67,7 +67,7 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://47.103.15.103:6001/eureka
+      defaultZone: http://${eureka.instance.hostname}:6001/eureka
 
 emp:
   name: zhangsan33
