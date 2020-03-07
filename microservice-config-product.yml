@@ -28,14 +28,13 @@ spring:
 eureka:
   instance:
     hostname: 47.103.15.103
+    instanceId: ${spring.application.name}:${server.port}
+    prefer-ip-address: true 
   client:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://47.103.15.103:6001/eureka
-  instance:
-    instanceId: ${spring.application.name}:${server.port}
-    prefer-ip-address: true 
 ---
 server:
   port: 8101
@@ -62,13 +61,13 @@ spring:
 eureka:
   instance:
     hostname: 47.103.15.103
+    instanceId: ${spring.application.name}:${server.port}
+    prefer-ip-address: true 
   client:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://47.103.15.103:6001/eureka
-  instance:
-    instanceId: ${spring.application.name}:${server.port}
-    prefer-ip-address: true 
+
 emp:
   name: zhangsan33
