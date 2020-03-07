@@ -4,7 +4,7 @@ spring:
     active: dev # 激活开发环境配置
 ---
 server:
-  port: 8101
+  port: 8001
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml 
   type-aliases-package: com.yangpeng.springcloud.entities
@@ -26,19 +26,17 @@ spring:
       max-wait-millis: 150
 
 eureka:
-  instance:
-    hostname: 47.103.15.103
   client:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:6001/eureka
+      defaultZone: http://47.103.15.103:6001/eureka
   instance:
     instanceId: ${spring.application.name}:${server.port}
     prefer-ip-address: true 
 ---
 server:
-  port: 8101
+  port: 8001
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml 
   type-aliases-package: com.yangpeng.springcloud.entities
@@ -60,13 +58,11 @@ spring:
       max-wait-millis: 150
 
 eureka:
-  instance:
-    hostname: 47.103.15.103
   client:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:6001/eureka
+      defaultZone: http://47.103.15.103:6001/eureka
   instance:
     instanceId: ${spring.application.name}:${server.port}
     prefer-ip-address: true 
