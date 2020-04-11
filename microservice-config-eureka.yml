@@ -12,7 +12,8 @@ spring:
     
 eureka:
   instance:
-    hostname: 47.103.15.103
+#     hostname: 47.103.15.103
+    hostname: eureka6001.com
   client:
     registerWithEureka: false 
     fetchRegistry: false 
@@ -30,7 +31,8 @@ spring:
 
 eureka:
   instance:
-    hostname: 47.103.15.103
+#     hostname: 47.103.15.103
+    hostname: eureka6001.com
   client:
     registerWithEureka: false 
     fetchRegistry: false 
