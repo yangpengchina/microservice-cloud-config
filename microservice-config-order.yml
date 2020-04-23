@@ -26,7 +26,6 @@ spring:
       initial-size: 5
       max-total: 5
       max-wait-millis: 150
-
 eureka:
   instance:
 #     hostname: 47.103.15.103
@@ -38,6 +37,17 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:6001/eureka
+feign:
+  hystrix:
+    enabled: true # 开启服务熔断器
+  client:
+    config:
+      default:
+        connect-timeout: 10000
+        read-timeout: 20000
+      service-test:
+        connect-timeout: 10000
+        read-timeout: 20000
 ---
 server:
   port: 8201
@@ -62,7 +72,6 @@ spring:
       initial-size: 5
       max-total: 5
       max-wait-millis: 150
-
 eureka:
   instance:
     hostname: 47.103.15.103
@@ -74,6 +83,16 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:6001/eureka
-
+feign:
+  hystrix:
+    enabled: true # 开启服务熔断器
+  client:
+    config:
+      default:
+        connect-timeout: 10000
+        read-timeout: 20000
+      service-test:
+        connect-timeout: 10000
+        read-timeout: 20000
 emp:
   name: zhangsan33
