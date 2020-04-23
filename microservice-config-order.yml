@@ -65,8 +65,8 @@ spring:
 
 eureka:
   instance:
-#     hostname: 47.103.15.103
-    hostname: eureka6001.com
+    hostname: 47.103.15.103
+#     hostname: eureka6001.com
     instanceId: ${spring.application.name}:${server.port}
     prefer-ip-address: true 
   client:
