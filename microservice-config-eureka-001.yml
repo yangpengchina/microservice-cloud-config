@@ -32,13 +32,14 @@ spring:
 
 eureka:
   instance:
-    hostname: 47.103.15.103
-#     hostname: eureka6001.com
+#     hostname: 47.103.15.103
+    hostname: eureka6001.com
   client:
     registerWithEureka: false 
     fetchRegistry: false 
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:6002/eureka/
+#       defaultZone: http://${eureka.instance.hostname}:6002/eureka/
+      defaultZone: http://eureka6002.com:6002/eureka/
   server:
     enable-self-preservation: true # 开启自我保护机制*****************
     
