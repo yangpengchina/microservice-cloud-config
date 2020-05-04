@@ -18,7 +18,7 @@ eureka:
     registerWithEureka: false 
     fetchRegistry: false 
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:6001/eureka/,http://${eureka.instance.hostname}:6002/eureka/
+      defaultZone: http://${eureka.instance.hostname}:6002/eureka/
   server:
     enable-self-preservation: false # 禁用自我保护机制*****************
 ---
@@ -37,7 +37,7 @@ eureka:
     registerWithEureka: false 
     fetchRegistry: false 
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:6001/eureka/,http://${eureka.instance.hostname}:6002/eureka/
+      defaultZone: http://${eureka.instance.hostname}:6002/eureka/
   server:
     enable-self-preservation: true # 开启自我保护机制*****************
     
