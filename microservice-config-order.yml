@@ -29,14 +29,15 @@ spring:
 eureka:
   instance:
 #     hostname: 47.103.15.103
-    hostname: eureka6001.com
+#     hostname: eureka6001.com
     instanceId: ${spring.application.name}:${server.port}
     prefer-ip-address: true 
   client:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:6001/eureka,http://${eureka.instance.hostname}:6002/eureka
+#       defaultZone: http://${eureka.instance.hostname}:6001/eureka,http://${eureka.instance.hostname}:6002/eureka
+      defaultZone: http://eureka6001.com:6001/eureka,http://eureka6002.com:6002/eureka
 feign:
   hystrix:
     enabled: true # 开启服务熔断器
@@ -74,7 +75,7 @@ spring:
       max-wait-millis: 150
 eureka:
   instance:
-    hostname: 47.103.15.103
+#     hostname: 47.103.15.103
 #     hostname: eureka6001.com
     instanceId: ${spring.application.name}:${server.port}
     prefer-ip-address: true 
@@ -82,7 +83,8 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:6001/eureka,http://${eureka.instance.hostname}:6002/eureka
+#       defaultZone: http://${eureka.instance.hostname}:6001/eureka,http://${eureka.instance.hostname}:6002/eureka
+      defaultZone: http://eureka6001.com:6001/eureka,http://eureka6002.com:6002/eureka
 feign:
   hystrix:
     enabled: true # 开启服务熔断器
