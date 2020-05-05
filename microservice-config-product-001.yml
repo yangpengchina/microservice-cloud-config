@@ -13,6 +13,11 @@ spring:
   profiles: dev # 开发环境
   application:
     name: microservice-product			# ******服务名*******microservice-product-config
+  http:
+    encoding:
+      force: true
+      charset: UTF-8
+      enabled: true
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
 #     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -50,6 +55,11 @@ spring:
   profiles: prod # 生产环境
   application:
     name: microservice-product			# ******服务名*******microservice-product-config
+  http:
+    encoding:
+      force: true
+      charset: UTF-8
+      enabled: true
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
 #     driver-class-name: com.mysql.cj.jdbc.Driver
