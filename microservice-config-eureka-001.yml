@@ -11,14 +11,14 @@ spring:
     name: microservice-config-eureka-001
 eureka:
   instance:
-#     hostname: 47.103.15.103
     hostname: eureka6001.com
+#     hostname: 47.103.15.103
   client:
     registerWithEureka: false 
     fetchRegistry: false 
     serviceUrl:
-#       defaultZone: http://${eureka.instance.hostname}:6002/eureka/
       defaultZone: http://eureka6002.com:6002/eureka/
+#       defaultZone: http://${eureka.instance.hostname}:6002/eureka/
   server:
     enable-self-preservation: false # 禁用自我保护机制*****************
 #     eviction-interval-timer-in-ms: 100
@@ -32,14 +32,14 @@ spring:
     name: microservice-config-eureka-001
 eureka:
   instance:
-#     hostname: 47.103.15.103
     hostname: eureka6001.com
+#     hostname: 47.103.15.103
   client:
     registerWithEureka: false 
     fetchRegistry: false 
     serviceUrl:
-#       defaultZone: http://${eureka.instance.hostname}:6002/eureka/
       defaultZone: http://eureka6002.com:6002/eureka/
+#       defaultZone: http://${eureka.instance.hostname}:6002/eureka/
   server:
     enable-self-preservation: true # 开启自我保护机制*****************
 #     eviction-interval-timer-in-ms: 100
