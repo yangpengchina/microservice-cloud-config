@@ -22,6 +22,7 @@ eureka:
   server:
     enable-self-preservation: false # 禁用自我保护机制*****************
 #     eviction-interval-timer-in-ms: 100
+
 ---
 server:
   port: 60011 #端口号
